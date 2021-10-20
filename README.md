@@ -8,3 +8,4 @@ to do
 - button for deleting one character
 - history panel?
 - more operators?
+- do something about that windows-in-2000 look
