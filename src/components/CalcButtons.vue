@@ -1,6 +1,6 @@
 <template>
   <div class="buttons-wrap">
-    <button @click="emitClear('clear')">clear</button>
+    <button @click="emitClear">clear</button>
     <button @click="emitOperator('**')">n</button>
     <button @click="emitOperator('/')">/</button>
     <button @click="emitCharacter(7)">7</button>
@@ -15,10 +15,10 @@
     <button @click="emitCharacter(2)">2</button>
     <button @click="emitCharacter(3)">3</button>
     <button @click="emitOperator('+')">+</button>
-    <button @click="emitReverse('+/-')">+/-</button>
+    <button @click="emitReverse">+/-</button>
     <button @click="emitCharacter(0)">0</button>
     <button @click="emitCharacter('.')">.</button>
-    <button @click="emitEquals('=')">=</button>
+    <button @click="emitEquals">=</button>
   </div>
 </template>
 
@@ -52,18 +52,15 @@ export default {
       this.$emit('calc-operator', this.nextOperator);
     },
 
-    emitClear(clear) {
-      this.btnClear = clear;
+    emitClear() {
       this.$emit('calc-clear', this.btnClear);
     },
 
-    emitEquals(equals) {
-      this.btnEquals = equals;
+    emitEquals() {
       this.$emit('calc-equals', this.btnEquals);
     },
 
-    emitReverse(reverse) {
-      this.btnReverse = reverse;
+    emitReverse() {
       this.$emit('calc-reverse', this.btnReverse);
     },
   },

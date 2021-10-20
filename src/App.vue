@@ -41,19 +41,30 @@ export default {
 
   methods: {
     inputNumber(num) {
-      if (num === '.' && this.firstNumber.includes('.')) return;
+      if (
+        num === '.' &&
+        this.firstNumber.includes('.') &&
+        this.enteredOperator === ''
+      )
+        return;
+      if (num === '.' && this.secondNumber.includes('.')) return;
       if (this.enteredOperator === '') {
         this.firstNumber =
-          this.firstNumber + this.enteredNumber.toString() + num.toString();
+          this.firstNumber.toString() +
+          this.enteredNumber.toString() +
+          num.toString();
       } else {
         this.secondNumber =
-          this.secondNumber + this.enteredNumber.toString() + num.toString();
+          this.secondNumber.toString() +
+          this.enteredNumber.toString() +
+          num.toString();
       }
       this.result = '';
     },
 
     inputOperator(operator) {
-      if (this.enteredOperator !== '') {
+      if (this.firstNumber === '') return;
+      if (this.enteredOperator !== '' && this.secondNumber !== '') {
         this.computeResult();
         this.firstNumber = this.result;
         this.result = '';
@@ -65,9 +76,11 @@ export default {
       this.firstNumber = '';
       this.secondNumber = '';
       this.enteredOperator = '';
+      this.result = '';
     },
 
     provideResult() {
+      if (this.secondNumber === '') return;
       this.computeResult();
     },
 
@@ -82,7 +95,6 @@ export default {
       this.firstNumber = '';
       this.secondNumber = '';
       this.enteredOperator = '';
-      console.log(this.result);
     },
   },
 };
@@ -146,12 +158,12 @@ export default {
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 
       button {
-        // flex-grow: 1;
         width: 20%;
         margin: 15px 10px;
         font-family: inherit;
         font-size: inherit;
         border: none;
+        border-radius: 5px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26);
       }
 
@@ -161,6 +173,7 @@ export default {
       }
 
       button:hover {
+        background-color: #aaa;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
         cursor: pointer;
       }

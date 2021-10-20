@@ -19,7 +19,7 @@ export default {
 
   computed: {
     smallScreenNumber() {
-      if (this.enteredOperator === '' || this.enteredOperator === '=') return;
+      if (this.enteredOperator === '') return;
       return this.firstNumber + this.enteredOperator;
     },
 
