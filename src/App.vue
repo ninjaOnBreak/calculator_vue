@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app-calculator">
     <div class="wrapper">
       <calc-screen
         :first-number="firstNumber"
@@ -23,7 +23,7 @@ import CalcScreen from './components/CalcScreen.vue';
 import CalcButtons from './components/CalcButtons.vue';
 
 export default {
-  name: 'App',
+  name: 'AppCalculator',
   components: {
     'calc-screen': CalcScreen,
     'calc-buttons': CalcButtons,
@@ -116,7 +116,7 @@ export default {
   box-sizing: border-box;
 }
 
-#app {
+#app-calculator {
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
