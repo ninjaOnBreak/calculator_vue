@@ -7,9 +7,6 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
   },
-  "files": [
-    "dist/*"
-  ],
   "keywords": [],
   "author": "ninjaOnBreak",
   "license": "ISC",
