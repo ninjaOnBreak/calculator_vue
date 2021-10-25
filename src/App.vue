@@ -43,11 +43,11 @@ export default {
     inputNumber(num) {
       if (
         num === '.' &&
-        this.firstNumber.includes('.') &&
+        this.firstNumber.toString().includes('.') &&
         this.enteredOperator === ''
       )
         return;
-      if (num === '.' && this.secondNumber.includes('.')) return;
+      if (num === '.' && this.secondNumber.toString().includes('.')) return;
       if (this.enteredOperator === '') {
         this.firstNumber =
           this.firstNumber.toString() +
@@ -116,14 +116,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--textColor);
-  height: 100vh;
 
   .wrapper {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 50%;
-    margin: 100px auto;
+    width: 450px;
+    margin: 50px auto;
 
     .screen {
       position: relative;

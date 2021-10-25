@@ -1,14 +1,17 @@
 {
-  "name": "vue-webpack-setup",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "vue-calculator-ninjaonbreak",
+  "version": "0.1.0",
+  "description": "Simple calculator built in Vue with webpack boilerplate",
+  "main": "./dist/index.*.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
   },
+  "files": [
+    "dist/*"
+  ],
   "keywords": [],
-  "author": "",
+  "author": "ninjaOnBreak",
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.6.5",
