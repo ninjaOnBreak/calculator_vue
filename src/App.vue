@@ -110,6 +110,12 @@ export default {
   --linkActiveColor: #41b783;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
@@ -120,7 +126,7 @@ export default {
   .wrapper {
     display: flex;
     flex-direction: column;
-    width: 450px;
+    width: 500px;
     margin: 50px auto;
 
     .screen {
@@ -129,7 +135,7 @@ export default {
       align-items: flex-end;
       justify-content: flex-end;
       width: 90%;
-      min-height: 80px;
+      min-height: 100px;
       margin: 20px;
       padding: 10px 20px;
       font-size: 40px;

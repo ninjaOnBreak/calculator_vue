@@ -1,8 +1,8 @@
 {
   "name": "vue-calculator-ninjaonbreak",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Simple calculator built in Vue with webpack boilerplate",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
